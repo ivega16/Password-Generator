@@ -90,8 +90,29 @@ function generatePassword() {
   }
 
 //loop
-for( var i = 0; i <= passSize; i++){
-  savedPassword[i];
+for (var i = savedPassword.length; i < passSize; i++) {
+  // Generate a random index based on the available character types
+  var randomIndex;
+
+  if (isSpecialChar === true && savedPassword.length < passSize) {
+    randomIndex = Math.floor(Math.random() * specialChar.length);
+    savedPassword += specialChar[randomIndex];
+  }
+
+  if (isNum === true && savedPassword.length < passSize) {
+    randomIndex = Math.floor(Math.random() * num.length);
+    savedPassword += num[randomIndex];
+  }
+
+  if (isLower === true && savedPassword.length < passSize) {
+    randomIndex = Math.floor(Math.random() * lowerCase.length);
+    savedPassword += lowerCase[randomIndex];
+  }
+
+  if (isUpper === true && savedPassword.length < passSize) {
+    randomIndex = Math.floor(Math.random() * upperCase.length);
+    savedPassword += upperCase[randomIndex];
+  }
 }
 
 
