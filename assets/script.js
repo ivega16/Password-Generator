@@ -47,7 +47,7 @@ function generatePassword() {
     var isNum = window.confirm("Do you want to include numbers in your password?");
     var isLower = window.confirm("Do you want to include lowercase in your password?");
 
-    var isUpper = window.confirm("Do you want to include supercase in your password?");
+    var isUpper = window.confirm("Do you want to include uppercase in your password?");
 
     
     if (isSpecialChar === true) {
